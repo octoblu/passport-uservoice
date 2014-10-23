@@ -38,7 +38,7 @@ authenticate requests.
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.get('/auth/uservoice', passport.authenticate('uservoice'));
+    app.get('/auth/uservoice', passport.authenticate('uservoice', { subdomain : SUBDOMAIN }));
 
     app.get('/auth/uservoice/callback',
       passport.authenticate('uservoice', { failureRedirect: '/login' }),
